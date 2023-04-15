@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <!--jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/custom.css">
+
+</head>
+
+<body class="overflow-hidden overflow-y-scroll">
+    <!--menu popup-->
+    <section id="menu" class="fixed top-0 bottom-0 z-30 w-full h-screen bg-[#f6841f]" style="display: none;">
+        <div class="flex items-center justify-between absolute w-full p-6 ">
+            <div>
+                <a class="text-3xl font-bold text-gray-900" href="index.html"> <a class="text-3xl font-bold text-white"
+                        href="index.html"><img class="h-16" src="img/logo.png" /></a>
+                </a>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button type="button" onclick="myFunction()"
+                    class="font-sans text-md font-semibold text-white flex items-center">
+                    <p class="mr-6 hidden lg:block">Close</p>
+                    <img class="h-12" src="img/logo_icon.png" alt="">
+
+                </button>
+            </div>
+        </div>
+
+        <div class="lg:grid lg:grid-cols-2 lg:gap-4">
+            <div class="flex justify-center mt-48 top_animation1">
+                <ul class="text-center space-y-2">
+                    <li class="p-3 cursor-pointer text-4xl font-semibold text-white">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="p-3 cursor-pointer text-4xl font-semibold text-white">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="p-3 cursor-pointer text-4xl font-semibold text-white">
+                        <a class="collapsible">Course</a>
+                        <div class="content overflow-hidden">
+                            <ul class="space-y-2 mt-4">
+                                <li class="text-xl font-semibold text-white"><a href="fullstack.html">Fullstack</a></li>
+                                <li class="text-xl font-semibold text-white"><a href="#">Data Science</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="p-3 cursor-pointer text-4xl font-semibold text-white">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="p-3 cursor-pointer text-xl font-base text-white rounded border bg-gray-900">
+                        <a href="dashboard.html">Login / Signup</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_animation1 hidden lg:block">
+                <img class="bg-cover bg-no-repeat bg-center"
+                    src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/07/full-sc-menu-1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!--end menu popup-->
+
+    <!--header-->
+    <nav class="absolute z-20 w-full top-0 p-6 flex items-center justify-between">
+        <a class="text-3xl font-bold text-white" href="index.html"><img class="h-16" src="img/logo.png" /></a>
+        <button type="button" onclick="openMenu()" class="font-sans text-md font-semibold text-white flex items-center">
+            <p class="mr-6 hidden lg:block">Menu</p>
+            <img class="h-12" src="img/logo_icon.png" alt="">
+
+        </button>
+    </nav>
+
+    <!--banner-->
+    <div class="bg-center bg-strip bg-cover bg-no-repeat bg-white pt-24">
+        <div class="max-w-7xl mx-auto mt-5 p-5 md:p-10 lg:h-60 md:flex md:items-center md:justify-between space-y-2">
+            <h1 class="top_animation1 text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 md:w-1/2 leading-6">
+                Positioning Yourself as a Premium Consultant
+            </h1>
+            <h3 class="right_animation1 text-xl md:text-2xl lg:text-4xl font-extrabold text-gray-900">$15.99</h3>
+        </div>
+    </div>
+    <!--end banner-->
+
+    <!--fullstack-->
+    <div class="p-4 overflow-hidden">
+
+
+        <div class="mt-5 md:mt-10">
+            <div class="lg:flex lg:space-x-10 max-w-7xl mx-auto">
+                <!--left content-->
+                <div class="lg:w-9/12 rounded-lg">
+                    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
+                        <div class="p-2 flex items-center space-x-3 border-b md:border-r md:border-b-0">
+                            <img class="h-16 rounded-lg" src="img/instructor.jpg" alt="">
+                            <div>
+                                <h1 class="text-md font-semibold text-gray-900 md:w-1/2 leading-6">
+                                    Instructor
+                                </h1>
+                                <p class="text-xs text-gray-600">Instructor Name</p>
+                            </div>
+                        </div>
+                        <div class="p-2 flex items-center space-x-3 border-b md:border-r md:border-b-0">
+                            <!-- <img class="h-16 rounded-lg" src="img/instructor.jpg" alt=""> -->
+                            <div>
+                                <h1 class="text-md font-semibold text-gray-900 md:w-1/2 leading-6">
+                                    Category
+                                </h1>
+                                <p class="text-xs text-gray-600">business | coaching</p>
+                            </div>
+                        </div>
+                        <div class="p-2 flex items-center space-x-3 border-b md:border-r md:border-b-0">
+                            <!-- <img class="h-16 rounded-lg" src="img/instructor.jpg" alt=""> -->
+
+                            <div>
+                                <h1 class="text-md font-semibold text-gray-900 md:w-1/2 leading-6">
+                                    Review
+                                </h1>
+                                <div class="flex items-center space-x-2">
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-4 h-4 text-orange-400">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-4 h-4 text-orange-400">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-4 h-4 text-orange-400">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                            class="w-4 h-4 text-orange-400">
+                                            <path fill-rule="evenodd"
+                                                d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-orange-400">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                        </svg>
+                                    </span>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 flex items-center space-x-3 border-b  md:border-b-0">
+                            <button
+                                class="right_animation2 w-full rounded-full border border-gray-900 p-2 font-semibold flex items-center justify-center space-x-3 text-grsy-900 font-sans left">
+                                <a href="">Login / Register</a>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-gray-900">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <!--img-->
+                    <div class="mt-5">
+                        <img class="rounded-lg" src="img/banner11.png" alt="">
+                    </div>
+
+                    <!--details-->
+                    <div class="mt-10">
+
+
+                        <div
+                            class="flex items-center justify-between space-x-2 overflow-hidden overflow-x-scroll lg:overflow-x-hidden">
+                            <button class="tablink w-full p-4 rounded-lg"
+                                onclick="openCity('Description', this, '#f6841f')" id="defaultOpen">Description</button>
+                            <button class="tablink w-full p-4 rounded-lg"
+                                onclick="openCity('Curriculum', this, '#f6841f')">Curriculum</button>
+                            <button class="tablink w-full p-4 rounded-lg"
+                                onclick="openCity('Reviews', this, '#f6841f')">Reviews</button>
+                            <button class="tablink w-full p-4 rounded-lg"
+                                onclick="openCity('Members', this, '#f6841f')">Members</button>
+                        </div>
+
+                        <div id="Description" class="tabcontent p-4 mt-3">
+                            <h1 class="text-lg font-semibold text-gray-900 my-3">About this course</h1>
+                            <div class="">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+                                    eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                                    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                                    consetetur sadipsc ing elitr, sed diam nonumy. Eirmod tempor invidunt ut labore et
+                                    dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                                    ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                                    diam nonumy eirmod tempor inv idunt ut labore et dolore magna aliquyam erat, sed
+                                    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                                    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                                    dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. Eirmod tempor invidunt
+                                    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                                    est Lorem ipsum dolor sit amet. </p>
+                            </div>
+
+                            <h1 class="text-lg font-semibold text-gray-900 my-3">What you’ll learn</h1>
+                            <div class="">
+                                <ul class="space-y-8">
+                                    <li class="flex items-center space-x-3">
+                                        <div class="w-20">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.3" stroke="currentColor" class="w-10 h-10">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur tet clita no sea takimata sanctus est
+                                            Lorem ipsum dolor sit amet.sea takimata sanctus est Lorem ipsum dolor sit
+                                            amet. </p>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <div class="w-20">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.3" stroke="currentColor" class="w-10 h-10">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur tet clita no sea takimata sanctus est
+                                            Lorem ipsum dolor sit amet.sea takimata sanctus est Lorem ipsum dolor sit
+                                            amet. </p>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <div class="w-20">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.3" stroke="currentColor" class="w-10 h-10">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur tet clita no sea takimata sanctus est
+                                            Lorem ipsum dolor sit amet.sea takimata sanctus est Lorem ipsum dolor sit
+                                            amet. </p>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <div class="w-20">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.3" stroke="currentColor" class="w-10 h-10">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur tet clita no sea takimata sanctus est
+                                            Lorem ipsum dolor sit amet.sea takimata sanctus est Lorem ipsum dolor sit
+                                            amet. </p>
+                                    </li>
+                                    <li class="flex items-center space-x-3">
+                                        <div class="w-20">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.3" stroke="currentColor" class="w-10 h-10">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consetetur tet clita no sea takimata sanctus est
+                                            Lorem ipsum dolor sit amet.sea takimata sanctus est Lorem ipsum dolor sit
+                                            amet. </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="Curriculum" class="tabcontent p-4 mt-3">
+                            <h1 class="text-lg font-semibold text-gray-900 my-3">Syllabus</h1>
+                            <div class="">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+                                    eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                                    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                                    consetetur sadipsc ing elitr, sed diam nonumy. Eirmod tempor invidunt ut labore et
+                                    dolore.</p>
+                            </div>
+
+                            <div class="mt-8 bg-gray-100 rounded-lg p-5 mdp-10">
+                                <div class="pb-3 border-b flex items-center justify-between">
+                                    <h1 class="text-lg font-semibold text-gray-900">Week 1</h1>
+                                    <h1 class="text-lg font-semibold text-gray-900">5</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-lg font-semibold text-gray-900 my-3">About this course</h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                                </div>
+
+                                <div class="mt-3 flex items-center space-x-2">
+                                    <p><span>3</span> videos,</p>
+                                    <p><span>1</span> audio,</p>
+                                    <p><span>1</span> reading</p>
+                                </div>
+
+                                <div class="mt-3">
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center justify-between flex-wrap p-3 border-b">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Video: </span>
+                                                <span>Greetings and Introductions</span>
+                                                <span
+                                                    class="bg-[#f6841f] text-white px-2 py-1 text-xs rounded">preview</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap p-3 border-b">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Video: </span>
+                                                <span>Crowdsourcing</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap p-3 border-b">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Audio: </span>
+                                                <span>Listening Exercise</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap p-3 border-b">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Video: </span>
+                                                <span>Collocations For Job Interview</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap p-3">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Reading: </span>
+                                                <span>Word Types</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 bg-gray-100 rounded-lg p-5 mdp-10">
+                                <div class="pb-3 border-b flex items-center justify-between">
+                                    <h1 class="text-lg font-semibold text-gray-900">Week 1</h1>
+                                    <h1 class="text-lg font-semibold text-gray-900">5</h1>
+                                </div>
+                                <div>
+                                    <h1 class="text-lg font-semibold text-gray-900 my-3">About this course</h1>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                                </div>
+
+                                <div class="mt-3 flex items-center space-x-2">
+                                    <p><span>3</span> videos,</p>
+                                    <p><span>1</span> audio,</p>
+                                    <p><span>1</span> reading</p>
+                                </div>
+
+                                <div class="mt-3">
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center justify-between flex-wrap p-3 border-b">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Video: </span>
+                                                <span>Greetings and Introductions</span>
+                                                <span
+                                                    class="bg-[#f6841f] text-white px-2 py-1 text-xs rounded">preview</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap p-3 border-b">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Video: </span>
+                                                <span>Crowdsourcing</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap p-3 border-b">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Audio: </span>
+                                                <span>Listening Exercise</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap p-3 border-b">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Video: </span>
+                                                <span>Collocations For Job Interview</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap p-3">
+                                            <p class="flex items-center space-x-2">
+                                                <span>Reading: </span>
+                                                <span>Word Types</span>
+                                            </p>
+
+                                            <p class="flex items-center space-x-2">
+                                                <span>15</span>
+                                                <span>minutes</span>
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="w-6 h-6">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                </span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="Reviews" class="tabcontent p-4 mt-3">
+                            <h1 class="text-lg font-semibold text-gray-900 my-3">Reviews</h1>
+                            <div class="">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+                                    eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                                    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                                    consetetur sadipsc ing elitr, sed diam nonumy. Eirmod tempor invidunt ut labore et
+                                    dolore.</p>
+                            </div>
+
+                            <div class="mt-8 bg-gray-50 rounded-lg p-10 lg:flex">
+                                <div class="lg:w-1/3 flex items-center justify-center border-r">
+                                    <div class="text-center">
+                                        <h1 class="text-6xl">5</h1>
+                                        <div class="flex items-center justify-center space-x-2">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="w-4 h-4 text-orange-400">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </span>
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="w-4 h-4 text-orange-400">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </span>
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="w-4 h-4 text-orange-400">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </span>
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="currentColor" class="w-4 h-4 text-orange-400">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </span>
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor"
+                                                    class="w-4 h-4 text-orange-400">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <p>Rated 5 out of 1 rating </p>
+                                    </div>
+                                </div>
+                                <div class="lg:w-2/3 flex items-center justify-center">
+                                    <div class="w-80">
+                                        <div class="flex items-center mt-4 w-full">
+                                            <span class="text-sm font-medium ">5 star</span>
+                                            <div class="w-2/4 h-2 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                <div class="h-2 bg-yellow-400 rounded" style="width: 70%"></div>
+                                            </div>
+                                            <span class="text-sm font-medium ">70%</span>
+                                        </div>
+                                        <div class="flex items-center mt-4">
+                                            <span class="text-sm font-medium ">4 star</span>
+                                            <div class="w-2/4 h-2 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                <div class="h-2 bg-yellow-400 rounded" style="width: 17%"></div>
+                                            </div>
+                                            <span class="text-sm font-medium ">17%</span>
+                                        </div>
+                                        <div class="flex items-center mt-4">
+                                            <span class="text-sm font-medium ">3 star</span>
+                                            <div class="w-2/4 h-2 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                <div class="h-2 bg-yellow-400 rounded" style="width: 8%"></div>
+                                            </div>
+                                            <span class="text-sm font-medium ">8%</span>
+                                        </div>
+                                        <div class="flex items-center mt-4">
+                                            <span class="text-sm font-medium ">2 star</span>
+                                            <div class="w-2/4 h-2 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                <div class="h-2 bg-yellow-400 rounded" style="width: 4%"></div>
+                                            </div>
+                                            <span class="text-sm font-medium ">4%</span>
+                                        </div>
+                                        <div class="flex items-center mt-4">
+                                            <span class="text-sm font-medium ">2 star</span>
+                                            <div class="w-2/4 h-2 mx-4 bg-gray-200 rounded dark:bg-gray-700">
+                                                <div class="h-2 bg-yellow-400 rounded" style="width: 2%"></div>
+                                            </div>
+                                            <span class="text-sm font-medium ">2%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="Members" class="tabcontent p-4 mt-3">
+                            <h1 class="text-lg font-semibold text-gray-900 my-3">Members</h1>
+                            <div class="">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+                                    eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                                    takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                                    consetetur sadipsc ing elitr, sed diam nonumy. Eirmod tempor invidunt ut labore et
+                                    dolore.</p>
+                            </div>
+
+                            <div class="mt-8 bg-gray-50 rounded-lg p-6 lg:p-10">
+                                <div class="pb-3 border-b flex md:items-center justify-between">
+                                    <h1 class="text-lg font-semibold text-gray-900">Total number of students in course:
+                                    </h1>
+                                    <h1 class="text-lg font-semibold text-gray-900">5</h1>
+                                </div>
+
+                                <div class="mt-3">
+                                    <ul class="space-y-3">
+                                        <li class="flex items-center justify-between flex-wrap lg:p-3 border-b">
+                                            <div class="lg:w-1/3 flex items-center space-x-5">
+                                                <img class="rounded"
+                                                    src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/05/Comment-img-5.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <h1 class="text-lg font-semibold text-gray-900">Penny Mills</h1>
+                                                    <p class="text-gray-500 leading-5">Business learning</p>
+                                                </div>
+                                            </div>
+                                            <p class="lg:w-2/3 mt-3 lg:mt-0">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore.
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap lg:p-3 border-b">
+                                            <div class="lg:w-1/3 flex items-center space-x-5">
+                                                <img class="rounded"
+                                                    src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/05/Comment-img-5.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <h1 class="text-lg font-semibold text-gray-900">Penny Mills</h1>
+                                                    <p class="text-gray-500 leading-5">Business learning</p>
+                                                </div>
+                                            </div>
+                                            <p class="lg:w-2/3 mt-3 lg:mt-0">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore.
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap lg:p-3 border-b">
+                                            <div class="lg:w-1/3 flex items-center space-x-5">
+                                                <img class="rounded"
+                                                    src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/05/Comment-img-5.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <h1 class="text-lg font-semibold text-gray-900">Penny Mills</h1>
+                                                    <p class="text-gray-500 leading-5">Business learning</p>
+                                                </div>
+                                            </div>
+                                            <p class="lg:w-2/3 mt-3 lg:mt-0">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore.
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap lg:p-3 border-b">
+                                            <div class="lg:w-1/3 flex items-center space-x-5">
+                                                <img class="rounded"
+                                                    src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/05/Comment-img-5.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <h1 class="text-lg font-semibold text-gray-900">Penny Mills</h1>
+                                                    <p class="text-gray-500 leading-5">Business learning</p>
+                                                </div>
+                                            </div>
+                                            <p class="lg:w-2/3 mt-3 lg:mt-0">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore.
+                                            </p>
+                                        </li>
+                                        <li class="flex items-center justify-between flex-wrap lg:p-3">
+                                            <div class="lg:w-1/3 flex items-center space-x-5">
+                                                <img class="rounded"
+                                                    src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/05/Comment-img-5.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <h1 class="text-lg font-semibold text-gray-900">Penny Mills</h1>
+                                                    <p class="text-gray-500 leading-5">Business learning</p>
+                                                </div>
+                                            </div>
+                                            <p class="lg:w-2/3 mt-3 lg:mt-0">
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function openCity(cityName, elmnt, color) {
+                                var i, tabcontent, tablinks;
+                                tabcontent = document.getElementsByClassName("tabcontent");
+                                for (i = 0; i < tabcontent.length; i++) {
+                                    tabcontent[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablink");
+                                for (i = 0; i < tablinks.length; i++) {
+                                    tablinks[i].style.backgroundColor = "";
+                                }
+                                document.getElementById(cityName).style.display = "block";
+                                elmnt.style.backgroundColor = color;
+
+                            }
+                            // Get the element with id="defaultOpen" and click on it
+                            document.getElementById("defaultOpen").click();
+                        </script>
+                    </div>
+
+
+                </div>
+                <!--end left content-->
+
+                <!--right content-->
+                <div class="lg:w-3/12 rounded-lg p-5">
+                    <h1 class="text-md font-semibold text-gray-900 leading-6">
+                        Course features
+                    </h1>
+                    <div class="grid grid-cols-2 gap-1 rounded overflow-hidden mt-5">
+                        <div class="bg-gray-200 p-2">
+                            <h1 class="text-xs font-base text-gray-900 leading-6">
+                                Duration
+                            </h1>
+                        </div>
+                        <div class="bg-gray-50 p-2">
+                            <h1 class="text-xs font-base text-gray-500 leading-6">
+                                3 Weeks
+                            </h1>
+                        </div>
+
+                        <div class="bg-gray-200 p-2">
+                            <h1 class="text-xs font-base text-gray-900 leading-6">
+                                Maximum Students
+                            </h1>
+                        </div>
+                        <div class="bg-gray-50 p-2">
+                            <h1 class="text-xs font-base text-gray-500 leading-6">
+                                5
+                            </h1>
+                        </div>
+
+                        <div class="bg-gray-200 p-2">
+                            <h1 class="text-xs font-base text-gray-900 leading-6">
+                                Max Retakes
+                            </h1>
+                        </div>
+                        <div class="bg-gray-50 p-2">
+                            <h1 class="text-xs font-base text-gray-500 leading-6">
+                                3
+                            </h1>
+                        </div>
+
+                        <div class="bg-gray-200 p-2">
+                            <h1 class="text-xs font-base text-gray-900 leading-6">
+                                Pass Percentage
+                            </h1>
+                        </div>
+                        <div class="bg-gray-50 p-2">
+                            <h1 class="text-xs font-base text-gray-500 leading-6">
+                                90
+                            </h1>
+                        </div>
+
+                        <div class="bg-gray-200 p-2">
+                            <h1 class="text-xs font-base text-gray-900 leading-6">
+                                Lessons
+                            </h1>
+                        </div>
+                        <div class="bg-gray-50 p-2">
+                            <h1 class="text-xs font-base text-gray-500 leading-6">
+                                10
+                            </h1>
+                        </div>
+
+                        <div class="bg-gray-200 p-2">
+                            <h1 class="text-xs font-base text-gray-900 leading-6">
+                                Quiz
+                            </h1>
+                        </div>
+                        <div class="bg-gray-50 p-2">
+                            <h1 class="text-xs font-base text-gray-500 leading-6">
+                                1
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <!--end right content-->
+
+            </div>
+        </div>
+    </div>
+
+    <!--custom js-->
+    <script src="js/custom.js"></script>
+
+    <!--collapse course-->
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <!--end collapse course-->
+    <!--footer-->
+    <footer class="bg-gray-900">
+        <div class="p-4 max-w-7xl mx-auto bg-no-repeat py-20">
+            <div class="container mx-auto px-4 lg:px-0 pt-10">
+                <div class="text-left lg:flex justify-between mt-4 gap-4">
+                    <div class="mb-6 lg:w-1/4">
+                        <h5 class="uppercase font-bold mb-2.5">
+                            <img class="h-20" src="img/logo.png" alt="">
+                        </h5>
+                    </div>
+                    <div class="mb-6 lg:w-1/4 border-t">
+                        <h5 class="font-bold my-3 text-base text-gray-200">Communication</h5>
+                        <ul class="list-none mb-0">
+                            <li>
+                                <a href=""
+                                    class="text-base text-gray-400 hover:text-gray-500 hover:no-underline">Tel:+91 99999
+                                    99999</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-base text-gray-400 hover:text-gray-500 hover:no-underline">Email:
+                                    loremipsum@.com</a>
+                            </li>
+                            <li>
+                                <div class="flex my-3">
+                                    <a href="https://www.facebook.com/Tutoroot/" target="_blank"
+                                        class="rounded-full border-2 border-green-500 text-green-400 leading-normal uppercase hover:bg-green-100 hover:text-green-500 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab"
+                                            data-icon="facebook-f" class="w-2 h-full mx-auto" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                            <path fill="currentColor"
+                                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/tutoroot" target="_blank"
+                                        class="rounded-full border-2 border-green-500 text-green-400 leading-normal uppercase hover:bg-green-100 hover:text-green-500 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab"
+                                            data-icon="linkedin-in" class="w-3 h-full mx-auto" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor"
+                                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://twitter.com/Tutoroot" target="_blank"
+                                        class="rounded-full border-2 border-green-500 text-green-400 leading-normal uppercase hover:bg-green-100 hover:text-green-500 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter"
+                                            class="w-3 h-full mx-auto" role="img" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 512 512">
+                                            <path fill="currentColor"
+                                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.instagram.com/tutoroot/?utm_medium=copy_link" target="_blank"
+                                        class="rounded-full border-2 border-green-500 text-green-400 leading-normal uppercase hover:bg-green-100 hover:text-green-500 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab"
+                                            data-icon="instagram" class="w-3 h-full mx-auto" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor"
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.youtube.com/@tutorootonlineinstitution3898/videos"
+                                        target="_blank"
+                                        class="rounded-full border-2 border-green-500 text-green-400 leading-normal uppercase hover:bg-green-100 hover:text-green-500 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                                            class="w-4 h-full mx-auto">
+                                            <path fill="currentColor"
+                                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="mt-3">
+                                <a href="https://play.google.com/store/apps/details?id=com.tutoroot.student"
+                                    target="_blank">
+                                    <img class="h-9 lg:h-11" src="https://www.tutoroot.com/images/gplay.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-6 lg:w-1/4 border-t">
+                        <h5 class="font-bold my-3 text-base text-gray-200">Need Some Help?</h5>
+                        <ul class="list-none mb-0">
+                            <li>
+                                <a href=""
+                                    class="text-base text-gray-400 hover:text-gray-500 hover:no-underline">FAQs</a>
+                            </li>
+                            <li>
+                                <a href=""
+                                    class="text-base text-gray-400 hover:text-gray-500 hover:no-underline">Contact</a>
+                            </li>
+                            <li>
+                                <a href=""
+                                    class="text-base text-gray-400 hover:text-gray-500 hover:no-underline">One-on-one</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mb-6 lg:w-1/4 border-t">
+                        <h5 class="font-bold my-3 text-base text-gray-200">About</h5>
+                        <ul class="list-none mb-0">
+                            <li>
+                                <a href=""
+                                    class="text-base text-gray-400 hover:text-gray-500 hover:no-underline">About</a>
+                            </li>
+                            <li>
+                                <a href=""
+                                    class="text-base text-gray-400 hover:text-gray-500 hover:no-underline">Media</a>
+                            </li>
+                            <li>
+                                <a href="" target=""
+                                    class="text-base text-gray-400 hover:text-gray-500 hover:no-underline">Blog</a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" href="" target="_blank"
+                                    class="text-base text-gray-400 hover:text-gray-500 hover:no-underline">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
